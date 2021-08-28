@@ -25,18 +25,18 @@
 (let* ((color-fg "#a89984")
        (color-bg "#292828")
        (color-orange "#D8983f")
-       (color-bright "#4F4D4D")
+       (color-bright "#F4DDC0")
        (color-black "#928370")
+       (color-middle "#928370")
+       (color-gray "#928374")
        (color-dark-gray "#a9a9a9")
        (color-red "#ea6962")
        (color-yellow "#d8a657")
        (color-pink "#d3869b")
-       (color-gray "#928374")
        (color-blue "#7daea3")
        (color-dark "#616b72")
        (color-middle-dark "#4F4D4D")
        (color-light-dark "#686363")
-       (color-middle "#928370")
        (color-aqua "#89b482")
        (color-light "#a9b5bd"))
 
@@ -51,7 +51,7 @@
                  :foreground ,color-bg))))
    `(region ((t (:background ,color-fg
                  :foreground ,color-bg))))
-   `(mode-line ((t (:background ,color-dark
+   `(mode-line ((t (:background ,color-light-dark
                     :foreground ,color-bg
                     :box nil))))
    `(mode-line-buffer-id ((t (:foreground ,color-bg))))
@@ -63,11 +63,11 @@
    `(font-lock-comment-face ((t (:inherit italic :foreground ,color-middle))))
    `(font-lock-doc-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-constant-face ((t (:inherit italic :foreground ,color-gray))))
-   `(font-lock-function-name-face ((t (:foreground ,color-black))))
+   `(font-lock-function-name-face ((t (:foreground ,color-fg))))
    `(font-lock-keyword-face ((t (:foreground ,color-dark :inherit italic))))
    `(font-lock-string-face ((t (:foreground ,color-dark))))
    `(font-lock-type-face ((t (:foreground ,color-dark))))
-   `(font-lock-variable-name-face ((t (:foreground ,color-fg))))
+   `(font-lock-variable-name-face ((t (:foreground ,color-bright))))
    `(font-lock-warning-face
      ((t (:foreground ,color-fg :background ,color-bright))))
 
@@ -166,11 +166,13 @@
    ;; Company
    `(company-preview ((t (:foreground ,color-fg :background nil))))
    `(company-preview-common ((t (:foreground ,color-fg :background nil))))
-   `(company-tooltip ((t (:foreground ,color-fg :background ,color-middle-dark))))
+
+   `(company-tooltip-selection ((t (:foreground ,color-fg :background ,color-middle-dark))))
    `(company-tooltip-common ((t (:foreground ,color-middle))))
-   `(company-tooltip-selection ((t (:background ,color-bg))))
+   `(company-tooltip ((t (:background ,color-bg))))
    `(company-tooltip-common-selection ((t (:foreground ,color-middle))))
    `(company-tooltip-annotation ((t (:foreground ,color-dark))))
+
    `(company-scrollbar-bg ((t (:background ,color-bright))))
    `(company-scrollbar-fg ((t (:background ,color-bg))))
 
